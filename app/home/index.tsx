@@ -1,5 +1,5 @@
 import CustomBottons from '@/components/shared/CustomBottons'
-import { router } from 'expo-router'
+import { Link, router } from 'expo-router'
 import React from 'react'
 import { View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -18,8 +18,9 @@ const HomeScreen = () => {
           Settings
         </Link> */}
 
+
         <CustomBottons
-          className='mb-2'
+          className='mb-10'
           color='primary'
           onPress={() => router.push('/products')}
         >
@@ -37,6 +38,21 @@ const HomeScreen = () => {
         >
           Settings
         </CustomBottons>
+
+        <Link className='mb-15' href='/products' asChild >
+          <CustomBottons
+            color='tertiary'
+          >
+            Products
+          </CustomBottons>
+        </Link>
+        <CustomBottons
+          variant='text-only'
+          onPress={() => router.push('/settings')}
+        >
+          Settings
+        </CustomBottons>
+
       </View>
     </SafeAreaView>
   )
