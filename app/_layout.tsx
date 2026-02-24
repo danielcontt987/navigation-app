@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack } from "expo-router";
+import { Slot, SplashScreen } from "expo-router";
 import { useEffect } from "react";
 import "./global.css";
 
@@ -15,8 +15,11 @@ export default function RootLayout() {
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
-  }, [fontsLoaded,error]);
+  }, [fontsLoaded, error]);
 
   if (!fontsLoaded && !error) return null;
-  return <Stack screenOptions={{ headerShown: false }} />;
+  //Ocultar el stacjk para evitar que se muestre antes de que las fuentes estén cargadas
+  // return <Stack screenOptions={{ headerShown: false }} />;
+  return <Slot />
+  // return <Stack />;
 }

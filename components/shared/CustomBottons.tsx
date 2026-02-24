@@ -12,15 +12,15 @@ const CustomButtons = React.forwardRef<View, Props>(
   ({ children, color = 'primary', variant = 'contained', onPress, className }, ref) => {
 
     const btnColor = {
-      primary: 'bg-blue-500',
-      secondary: 'bg-green-500',
-      tertiary: 'bg-gray-500',
+      primary: 'bg-primary',
+      secondary: 'bg-secondary',
+      tertiary: 'bg-tertiary',
     }[color]
 
     const textColor = {
-      primary: 'text-blue-500',
-      secondary: 'text-green-500',
-      tertiary: 'text-gray-500',
+      primary: 'text-primary',
+      secondary: 'text-secondary',
+      tertiary: 'text-tertiary',
     }[color]
 
     if (variant === 'text-only') {
