@@ -2,7 +2,8 @@ import { Redirect } from "expo-router";
 
 
 export default function Index() {
-  return <Redirect href='/(stack)/home' />
+  // return <Redirect href='/(stack)/home' />
+   return <Redirect href='/tabs' />
   // return (
   //   <SafeAreaView >
   //     <View className="mt-5 mx-2.5">
