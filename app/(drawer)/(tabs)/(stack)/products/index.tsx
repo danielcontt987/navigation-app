@@ -7,6 +7,7 @@ const ProductsScreen = () => {
   return (
     <View className='flex flex-1 px-4'>
       <FlatList 
+        showsVerticalScrollIndicator={false}
         data={products}
         keyExtractor={(product) => product.id}
         renderItem={({ item }) => 
