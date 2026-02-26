@@ -12,21 +12,21 @@ const HomeScreen = () => {
         <CustomBottons
           className='my-2 mb-5'
           color='primary'
-          onPress={() => router.push('/tabs/(stack)/products')}
+          onPress={() => router.push('/products')}
         >
           Productos
         </CustomBottons>
         <CustomBottons
           className='mb-5'
           color='secondary'
-          onPress={() => router.push('/tabs/profile')}
+          onPress={() => router.push('/profile')}
         >
           Profile
         </CustomBottons>
         <CustomBottons
           className='mb-5'
           color='tertiary'
-          onPress={() => router.push('/tabs/settings')}
+          onPress={() => router.push('/settings')}
         >
           Settings
         </CustomBottons>
@@ -40,7 +40,7 @@ const HomeScreen = () => {
         </Link> */}
         <CustomBottons
           variant='text-only'
-          onPress={() => router.push('/tabs/products')}
+          onPress={() => router.push('/products')}
         >
           Products
         </CustomBottons>
